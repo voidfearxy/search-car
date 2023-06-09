@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FearWeb-search</title>
+</head>
+<body>
+
+    <h1 id="baslikiki">//search//</h1>
+    <form id="search-form">
+        <input type="text" id="inp-search" name="q" placeholder="Google'da ara">
+    </form>
+
+    <div class="linkler">
+        <div class="cevir">
+            <a href="https://www.deepl.com/translator"><i class="fa fa-language"></i></a>
+        </div>
+        <div class="googletarayici">
+            <a href="https://www.google.com"><i class="fab fa-google"></i></a>
+        </div>
+        <div class="gpt">
+            <a href="https://chat.openai.com"><i class="fa fa-comment-dots"></i></a>
+        </div>
+    </div>
+
+    <div class="alt-satir-linkler">
+        <div class="youtube">
+            <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="imza">
+        <a href="https://www.instagram.com/fear.7884/"><p class="uzl">Coded by</p></a>
+
+        <div class="github">
+            <a href="https://github.com/voidfearxy"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="instagram">
+            <a href="https://www.instagram.com/fear.7884/"><i class="fab fa-instagram"> </i></a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 FearWeb</p>
+    </footer>
+
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    var input = document.getElementById("inp-search");
+    var searchQuery = input.value.trim();
+
+    if (searchQuery.endsWith(".yt")) {
+        searchQuery = searchQuery.slice(0, -3); // ".yt" kısmını kaldır
+        var url = "https://www.youtube.com/results?search_query=" + encodeURIComponent(searchQuery); 
+        window.open(url, "_blank");
+    } else if (searchQuery.endsWith(".ytm")) {
+        searchQuery = searchQuery.slice(0, -4); // ".ytm" kısmını kaldır
+        var url = "https://music.youtube.com/search?q=" + encodeURIComponent(searchQuery); 
+        window.open(url, "_blank");
+    } else if (searchQuery.endsWith(".spt")) {
+        searchQuery = searchQuery.slice(0, -4); // ".spt" kısmını kaldır
+        var url = "https://open.spotify.com/search/" + encodeURIComponent(searchQuery); 
+        window.open(url, "_blank");
+    } else {
+        if (searchQuery.trim() !== "") { 
+            var url = "https://www.google.com/search?q=" + encodeURIComponent(searchQuery); 
+            window.open(url, "_blank");
+        }
+    }
+
+    input.value = ""; 
+});
+
+    </script>
+</body>
+</html>
