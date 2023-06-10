@@ -1,1 +1,1 @@
-# search-car https://voidfearxy.github.io/search-car/
+# https://voidfearxy.github.io/search-car/
