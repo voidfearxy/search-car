@@ -18,7 +18,7 @@ body {
     width: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 15%;
+    top: 10%;
 }
 
 .uzl {
@@ -36,7 +36,7 @@ body {
 .imza div {
     text-align: center;
     margin-top: 16px;
-    width: 30px;
+    width: 20px;
 }
 
 .imza a{
@@ -168,15 +168,71 @@ body {
 }
 
 
-footer {
-    color: rgb(145, 100, 135);
-    position: fixed;
-    bottom: 0;
-    right: 2%;
-    text-align: right;
-   }
-
 
 ::placeholder {
-    color:  rgb(151, 134, 134);
+    color:  rgb(151, 134, 134); /* İstenilen renk değeri */
+}
+
+@media (min-width: 600px) {
+    .linkler, .alt-satir-linkler, .social{
+        width: 50%;
+    }
+}
+
+
+
+@media (min-width: 1000px) {
+    #baslikiki{
+        font-size: 30px;
+        top: 10%;
+    }
+    #inp-search{
+        font-size: 20px;
+    }
+    .linkler div, .alt-satir-linkler div    , .social div{
+        width: 60px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    #baslikiki{
+        font-size: 50px;
+        top: 10%;
+    }
+    #inp-search{
+        font-size: 30px;
+    }
+    .linkler div, .alt-satir-linkler div    , .social div{
+        width: 100px;
+    }
+    .imza{
+        font-size: 20px;
+    }
+    .imza div{
+        margin-top: 20px;
+    }
+}
+
+
+@media (min-width: 2500px) {
+    #baslikiki{
+        font-size: 70px;
+        top: 10%;
+    }
+    #inp-search{
+        font-size: 70px;
+    }
+    .linkler div, .alt-satir-linkler div    , .social div{
+        width: 200px;
+    }
+    .imza{
+        font-size: 40px;
+    }
+    .imza div{
+        margin: 10px;
+        margin-top: 40px;
+    }
+
+    
 }
